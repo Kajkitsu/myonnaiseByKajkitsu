@@ -62,7 +62,7 @@ class Emg(val myo: Myo){
     internal fun putDataToDataProcessor(characteristic: BluetoothGattCharacteristic) {
         val emgData = characteristic.value
         byteReader.byteData = emgData
-        Log.d(TAG, "emgData.size) "+emgData.size)
+//        Log.d(TAG, "emgData.size) "+emgData.size)
         // We receive 16 bytes of data. Let's cut them in 2 and deliver both of them.
         dataProcessor.onNext(byteReader.getBytes(EMG_ARRAY_SIZE / 2))
         dataProcessor.onNext(byteReader.getBytes(EMG_ARRAY_SIZE / 2))

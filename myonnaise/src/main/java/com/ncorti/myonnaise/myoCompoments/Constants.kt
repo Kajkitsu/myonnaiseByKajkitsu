@@ -67,22 +67,22 @@ const val MYO_EMG_CHANNELS = 8
 const val MYO_IMU_CHANNELS = 10
 
 /** Max Myo Value. This is used mostly for graphical purposes */
-const val MYO_MAX_GYR_VALUE =  20000000.0f
+const val MYO_MAX_GYR_VALUE =  120000f
 
 /** Min Myo Value. This is used mostly for graphical purposes */
-const val MYO_MIN_GYR_VALUE = -20000000.0f
+const val MYO_MIN_GYR_VALUE = -120000f
 
 /** Max Myo Value. This is used mostly for graphical purposes */
-const val MYO_MAX_ACC_VALUE = 150000000.0f
+const val MYO_MAX_ACC_VALUE = 120000f
 
 /** Min Myo Value. This is used mostly for graphical purposes */
-const val MYO_MIN_ACC_VALUE = -150000000.0f
+const val MYO_MIN_ACC_VALUE = -120000f
 
 /** Max Myo Value. This is used mostly for graphical purposes */
-const val MYO_MAX_ORI_VALUE = 1.0E9f
+const val MYO_MAX_ORI_VALUE = 120000f
 
 /** Min Myo Value. This is used mostly for graphical purposes */
-const val MYO_MIN_ORI_VALUE = -1.0E9f
+const val MYO_MIN_ORI_VALUE = -120000f
 
 /** Max Myo Value. This is used mostly for graphical purposes */
 const val MYO_MAX_EMG_VALUE = 150.0f

@@ -183,7 +183,7 @@ class SensorGraphViewForImu(context: Context, attrs: AttributeSet) : View(contex
 
 
 
-        for (i in 0 until 8) {
+        for (i in 0 until 10) {
 
             if (tableOfSelectedData[i]){
                 var currentX = pointSpan

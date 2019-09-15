@@ -1,6 +1,8 @@
 package com.ncorti.myonnaise
 
 import android.bluetooth.BluetoothGattCharacteristic
+import android.os.Build
+import android.util.Half
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 
@@ -44,6 +46,47 @@ class ByteReader {
         val result = FloatArray(size)
         for (i in 0 until size)
             result[i] = byteBuffer!!.get().toFloat()
+        return result
+    }
+
+    fun twoBytestoFloat(hbits:Int):Float {
+        var mant = hbits and 0x03ff
+        var exp = hbits and 0x7c00
+        if (exp == 0x7c00)
+            exp = 0x3fc00
+        else if (exp != 0)
+        {
+            exp += 0x1c000
+            if (mant == 0 && exp > 0x1c400)
+                return java.lang.Float.intBitsToFloat(hbits and 0x8000 shl 16 or (exp shl 13) or 0x3ff)
+        }
+        else if (mant != 0)
+        {
+            exp = 0x1c400
+            do
+            {
+                mant = mant shl 1
+                exp -= 0x400
+            }
+            while (mant and 0x400 == 0)
+            mant = mant and 0x3ff
+        }
+        return java.lang.Float.intBitsToFloat(hbits and 0x8000 shl 16 or (exp or mant shl 13))
+    }
+
+    fun getFloatFromHalf(size: Int): FloatArray{
+        val result = FloatArray(size)
+        for (i in 0 until size)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    var tmp : Half = Half(this.short)
+                    if(tmp.toFloat() == Float.POSITIVE_INFINITY ) result[i]=  100000f
+                    if(tmp.toFloat() == Float.NEGATIVE_INFINITY ) result[i]= -100000f
+                    if(tmp.toFloat().isNaN()) result[i]= 0f
+                    else result[i]=tmp.toFloat()
+                }
+                else{
+                  //  result[i] = twoBytestoFloat(this.short.toInt())
+                }
         return result
     }
 }
