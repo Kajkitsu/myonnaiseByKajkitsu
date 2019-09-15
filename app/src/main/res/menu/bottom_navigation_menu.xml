@@ -7,7 +7,7 @@
     <item android:id="@+id/item_control"
         android:icon="@drawable/ic_tune"
         android:title="@string/control" />
-    <item android:id="@+id/item_graph_emg"
+    <item android:id="@+id/item_graph"
         android:icon="@drawable/ic_chart_line"
         android:title="@string/graph_emg" />
     <item android:id="@+id/item_export"

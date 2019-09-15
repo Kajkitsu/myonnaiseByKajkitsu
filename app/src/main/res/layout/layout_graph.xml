@@ -5,15 +5,43 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent">
 
-    <Switch
-            android:id="@+id/imuModeOn"
+    <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|center"
-            android:onClick="actualize"
-            android:showText="true"
-            android:textOff="@string/zmienOFF"
-            android:textOn="@string/zmienON"/>
+            android:layout_gravity="right|top"
+            tools:ignore="RtlHardcoded">
+        <RadioButton
+                android:gravity="right|center_vertical"
+                android:layoutDirection="rtl"
+                android:checked="true"
+                android:onClick="actualize"
+                android:text="@string/emg_mode"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content" android:id="@+id/radioButtonEmg" android:layout_weight="1"/>
+        <RadioButton
+                android:layout_width="80dp"
+                android:gravity="right|center_vertical"
+                android:layoutDirection="rtl"
+                android:onClick="actualize"
+                android:text="@string/imu_mode"
+                android:layout_height="wrap_content" android:id="@+id/radioButtonImu" android:layout_weight="1"/>
+        <RadioButton
+                android:layout_width="80dp"
+                android:gravity="right|center_vertical"
+                android:layoutDirection="rtl"
+                android:onClick="actualize"
+                android:text="@string/class_mode"
+                android:layout_height="wrap_content" android:id="@+id/radioButtonClass" android:layout_weight="1"/>
+    </RadioGroup>
+<!--    <Switch-->
+<!--            android:id="@+id/imuModeOn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="top|center"-->
+<!--            android:onClick="actualize"-->
+<!--            android:showText="true"-->
+<!--            android:textOff="@string/zmienOFF"-->
+<!--            android:textOn="@string/zmienON"/>-->
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,68 +49,94 @@
 
 
         <CheckBox
-                android:id="@+id/ch0"
+                android:visibility="invisible"
+                android:id="@+id/ch0_imu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch0"/>
+                android:text="@string/ch0_imu"/>
 
         <CheckBox
-                android:id="@+id/ch1"
+                android:visibility="invisible"
+                android:id="@+id/ch1_imu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch1"/>
+                android:text="@string/ch1_imu"/>
 
         <CheckBox
-                android:id="@+id/ch2"
+                android:visibility="invisible"
+                android:id="@+id/ch2_imu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch2"/>
+                android:text="@string/ch2_imu"/>
 
         <CheckBox
-                android:id="@+id/ch3"
+                android:visibility="invisible"
+                android:id="@+id/ch3_imu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch3"/>
+                android:text="@string/ch3_imu"/>
 
         <CheckBox
-                android:id="@+id/ch4"
+                android:visibility="invisible"
+                android:id="@+id/ch4_imu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch4"/>
+                android:text="@string/ch4_imu"/>
 
         <CheckBox
-                android:id="@+id/ch5"
+                android:visibility="invisible"
+                android:id="@+id/ch5_imu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch5"/>
+                android:text="@string/ch5_imu"/>
 
         <CheckBox
-                android:id="@+id/ch6"
+                android:visibility="invisible"
+                android:id="@+id/ch6_imu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch6"/>
+                android:text="@string/ch6_imu"/>
 
         <CheckBox
-                android:id="@+id/ch7"
+                android:id="@+id/ch7_imu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch7"/>
+                android:text="@string/ch7_imu"
+                android:visibility="invisible"/>
+
+        <CheckBox
+                android:id="@+id/ch8_imu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="actualize"
+                android:text="@string/ch8_imu"
+                android:visibility="invisible"/>
+
+        <CheckBox
+                android:id="@+id/ch9_imu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="actualize"
+                android:text="@string/ch9_imu"
+                android:visibility="invisible"/>
 
     </LinearLayout>
 
@@ -90,96 +144,69 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
         <CheckBox
-                android:id="@+id/ch8"
+                android:id="@+id/ch0_emg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch8"
-                android:visibility="invisible"/>
+                android:text="@string/ch0_emg"/>
 
         <CheckBox
-                android:id="@+id/ch9"
+                android:id="@+id/ch1_emg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch9"
-                android:visibility="invisible"/>
+                android:text="@string/ch1_emg"/>
 
         <CheckBox
-                android:id="@+id/ch10"
+                android:id="@+id/ch2_emg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch10"
-                android:visibility="invisible"/>
+                android:text="@string/ch2_emg"/>
 
         <CheckBox
-                android:id="@+id/ch11"
+                android:id="@+id/ch3_emg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch11"
-                android:visibility="invisible"/>
+                android:text="@string/ch3_emg"/>
 
         <CheckBox
-                android:id="@+id/ch12"
+                android:id="@+id/ch4_emg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch12"
-                android:visibility="invisible"/>
+                android:text="@string/ch4_emg"/>
 
         <CheckBox
-                android:id="@+id/ch13"
+                android:id="@+id/ch5_emg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch13"
-                android:visibility="invisible"/>
+                android:text="@string/ch5_emg"/>
 
         <CheckBox
-                android:id="@+id/ch14"
+                android:id="@+id/ch6_emg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch14"
-                android:visibility="invisible"/>
+                android:text="@string/ch6_emg"/>
 
         <CheckBox
-                android:id="@+id/ch15"
+                android:id="@+id/ch7_emg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="actualize"
-                android:text="@string/ch15"
-                android:visibility="invisible"/>
-
-        <CheckBox
-                android:id="@+id/ch16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="actualize"
-                android:text="@string/ch16"
-                android:visibility="invisible"/>
-
-        <CheckBox
-                android:id="@+id/ch17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="actualize"
-                android:text="@string/ch17"
-                android:visibility="invisible"/>
+                android:text="@string/ch7_emg"/>
 
     </LinearLayout>
 
@@ -194,10 +221,18 @@
             android:visibility="invisible"
             android:layout_marginTop="100dp"/>
 
-    <com.ncorti.myonnaise.sensorgraphview.SensorGraphView
-            android:id="@+id/sensor_graph_view"
+    <com.ncorti.myonnaise.sensorgraphview.SensorGraphViewForEmg
+            android:id="@+id/sensor_graph_view_emg"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:visibility="visible"
+    />
+
+    <com.ncorti.myonnaise.sensorgraphview.SensorGraphViewForImu
+            android:id="@+id/sensor_graph_view_imu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
 
 
 </FrameLayout>

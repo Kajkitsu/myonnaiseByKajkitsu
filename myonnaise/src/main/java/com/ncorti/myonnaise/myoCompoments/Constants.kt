@@ -53,20 +53,46 @@ const val CHAR_EMG_POSTFIX = "05-a904-deb9-4748-2c7f4a124842"
  */
 val CHAR_CLIENT_CONFIG: UUID = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb")
 
-/** Myo Array Size. The device is sending arrays with 16 bytes in it every time. */
+/** Myo Array Size of Emg. The device is sending arrays with 16 bytes in it every time. */
 const val EMG_ARRAY_SIZE = 16
+
 
 /** Max Myo Frequency (200Hz) */
 const val MYO_MAX_FREQUENCY = 200
 
 /** Number of Myo EMG Channels */
-const val MYO_CHANNELS = 18
+const val MYO_EMG_CHANNELS = 8
+
+/** Number of Myo EMG Channels */
+const val MYO_IMU_CHANNELS = 10
 
 /** Max Myo Value. This is used mostly for graphical purposes */
-const val MYO_MAX_VALUE = 15000.0f
+const val MYO_MAX_GYR_VALUE =  20000000.0f
 
 /** Min Myo Value. This is used mostly for graphical purposes */
-const val MYO_MIN_VALUE = -15000.0f
+const val MYO_MIN_GYR_VALUE = -20000000.0f
+
+/** Max Myo Value. This is used mostly for graphical purposes */
+const val MYO_MAX_ACC_VALUE = 150000000.0f
+
+/** Min Myo Value. This is used mostly for graphical purposes */
+const val MYO_MIN_ACC_VALUE = -150000000.0f
+
+/** Max Myo Value. This is used mostly for graphical purposes */
+const val MYO_MAX_ORI_VALUE = 1.0E9f
+
+/** Min Myo Value. This is used mostly for graphical purposes */
+const val MYO_MIN_ORI_VALUE = -1.0E9f
+
+/** Max Myo Value. This is used mostly for graphical purposes */
+const val MYO_MAX_EMG_VALUE = 150.0f
+
+/** Min Myo Value. This is used mostly for graphical purposes */
+const val MYO_MIN_EMG_VALUE = -150.0f
+
+
+
+
 
 /** Keep Alive in MS. We will send an [CommandList.unSleep] command every [KEEP_ALIVE_INTERVAL_MS] */
 const val KEEP_ALIVE_INTERVAL_MS = 10000
