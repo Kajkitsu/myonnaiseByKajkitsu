@@ -1,4 +1,4 @@
-package com.ncorti.myonnaise.MyoCompoments
+package com.ncorti.myonnaise.myoCompoments
 
 import android.bluetooth.*
 import android.util.Log
@@ -22,7 +22,7 @@ class Emg(val myo: Myo){
      * Data is delivered as a FloatArray of size [MYO_CHANNELS].
      * If frequency is set (!= 0) then sub-sampling is performed to achieve the desired frequency.
      */
-    fun dataFlowableEmg(): Flowable<FloatArray> {
+    fun dataFlowable(): Flowable<FloatArray> {
         return if (myo.frequency == 0) {
             dataProcessor
         } else {
@@ -30,7 +30,7 @@ class Emg(val myo: Myo){
         }
     }
 
-    fun FindGattServiceEmg(gatt: BluetoothGatt) {
+    fun findGattService(gatt: BluetoothGatt) {
         service = gatt.getService(SERVICE_EMG_DATA_ID)
         service?.apply {
             characteristic0 = service?.getCharacteristic(CHAR_EMG_0_ID)
@@ -59,13 +59,12 @@ class Emg(val myo: Myo){
         }
     }
 
-    internal fun putEmgDataToDataProcessor(characteristic: BluetoothGattCharacteristic) {
+    internal fun putDataToDataProcessor(characteristic: BluetoothGattCharacteristic) {
         val emgData = characteristic.value
         byteReader.byteData = emgData
         Log.d(TAG, "emgData.size) "+emgData.size)
         // We receive 16 bytes of data. Let's cut them in 2 and deliver both of them.
         dataProcessor.onNext(byteReader.getBytes(EMG_ARRAY_SIZE / 2))
         dataProcessor.onNext(byteReader.getBytes(EMG_ARRAY_SIZE / 2))
-        //
     }
 }

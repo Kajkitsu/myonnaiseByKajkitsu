@@ -1,4 +1,4 @@
-package com.ncorti.myonnaise.MyoCompoments
+package com.ncorti.myonnaise.myoCompoments
 
 import java.util.UUID
 

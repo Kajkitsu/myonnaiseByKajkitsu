@@ -2,7 +2,7 @@
 
 package com.ncorti.myonnaise
 
-import com.ncorti.myonnaise.MyoCompoments.*
+import com.ncorti.myonnaise.myoCompoments.*
 import java.util.Arrays
 
 typealias Command = ByteArray

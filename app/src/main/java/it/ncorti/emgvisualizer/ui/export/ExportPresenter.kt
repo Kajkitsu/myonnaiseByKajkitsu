@@ -45,7 +45,7 @@ class ExportPresenter(
         deviceManager.myo?.apply {
             if (this.isStreaming()) {
                 if (dataSubscription == null || dataSubscription?.isDisposed == true) {
-                    dataSubscription = this.emg.dataFlowableEmg()
+                    dataSubscription = this.emg.dataFlowable()
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .doOnSubscribe {
@@ -71,7 +71,7 @@ class ExportPresenter(
         deviceManager.myo?.apply {
             if (this.isStreaming()) {
                 if (dataSubscription == null || dataSubscription?.isDisposed == true) {
-                    dataSubscription = this.dataFlowableImuGyro()
+                    dataSubscription = this.imu.dataFlowable()
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .doOnSubscribe {

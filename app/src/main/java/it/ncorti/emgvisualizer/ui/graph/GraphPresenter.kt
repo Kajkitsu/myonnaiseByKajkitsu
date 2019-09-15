@@ -24,7 +24,7 @@ class GraphPresenter(
                 dataSubscriptionEmg?.apply {
                     if (!this.isDisposed) this.dispose()
                 }
-                dataSubscriptionEmg = this.emg.dataFlowableEmg()
+                dataSubscriptionEmg = this.emg.dataFlowable()
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .doOnSubscribe {
@@ -38,7 +38,7 @@ class GraphPresenter(
                 dataSubscriptionImu?.apply {
                     if (!this.isDisposed) this.dispose()
                 }
-                dataSubscriptionImu = this.dataFlowableImuGyro()
+                dataSubscriptionImu = this.imu.dataFlowable()
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .doOnSubscribe {

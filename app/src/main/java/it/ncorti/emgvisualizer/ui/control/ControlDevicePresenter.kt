@@ -3,7 +3,7 @@
 package it.ncorti.emgvisualizer.ui.control
 
 import com.ncorti.myonnaise.*
-import com.ncorti.myonnaise.MyoCompoments.*
+import com.ncorti.myonnaise.myoCompoments.*
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers

@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.ncorti.myonnaise.MyoCompoments.MYO_MAX_VALUE
-import com.ncorti.myonnaise.MyoCompoments.MYO_MIN_VALUE
+import com.ncorti.myonnaise.myoCompoments.MYO_MAX_VALUE
+import com.ncorti.myonnaise.myoCompoments.MYO_MIN_VALUE
 import dagger.android.support.AndroidSupportInjection
 import it.ncorti.emgvisualizer.BaseFragment
 import it.ncorti.emgvisualizer.R
