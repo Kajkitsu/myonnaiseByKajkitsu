@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="graph_line1">#FF3f51b5</color>
+    <color name="graph_line2">#FF9c27b0</color>
+    <color name="graph_line3">#FF009688</color>
+    <color name="graph_line4">#FF8bc34a</color>
+    <color name="graph_line5">#FFffc107</color>
+    <color name="graph_line6">#FF795548</color>
+    <color name="graph_line7">#FFe51c23</color>
+    <color name="graph_line8">#FFcddc39</color>
+    <color name="graph_line9">#FF3f51b5</color>
+    <color name="graph_line10">#FF9c27b0</color>
+    <color name="graph_line11">#FF3f51b5</color>
+    <color name="graph_line12">#FF9c27b0</color>
+    <color name="graph_line13">#FF009688</color>
+    <color name="graph_line14">#FF8bc34a</color>
+    <color name="graph_line15">#FFffc107</color>
+    <color name="graph_line16">#FF795548</color>
+    <color name="graph_line17">#FFe51c23</color>
+    <color name="graph_line18">#FFe51c23</color>
+    <color name="graph_info">#1976D2</color>
+
+    <array name="graph_colors">
+        <item>@color/graph_line1</item>
+        <item>@color/graph_line2</item>
+        <item>@color/graph_line3</item>
+        <item>@color/graph_line4</item>
+        <item>@color/graph_line5</item>
+        <item>@color/graph_line6</item>
+        <item>@color/graph_line7</item>
+        <item>@color/graph_line8</item>
+        <item>@color/graph_line9</item>
+        <item>@color/graph_line10</item>
+        <item>@color/graph_line11</item>
+        <item>@color/graph_line12</item>
+        <item>@color/graph_line13</item>
+        <item>@color/graph_line14</item>
+        <item>@color/graph_line15</item>
+        <item>@color/graph_line16</item>
+        <item>@color/graph_line17</item>
+        <item>@color/graph_line18</item>
+    </array>
+</resources>
